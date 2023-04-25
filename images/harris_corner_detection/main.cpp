@@ -12,7 +12,7 @@
 using namespace cv;
 using namespace std;
 
-Mat src, src_gray;
+cv::Mat src, src_gray;
 int thresh = 200;
 int max_thresh = 255;
 
@@ -46,11 +46,11 @@ void cornerHarris_demo(int, void*) {
     int apertureSize = 3;
     double k = 0.04;
 
-    Mat dst = Mat::zeros(src.size(), CV_32FC1);
+    cv::Mat dst = cv::Mat::zeros(src.size(), CV_32FC1);
     cornerHarris(src_gray, dst, blockSize, apertureSize, k);
 
-    Mat dst_norm, dst_norm_scaled;
-    normalize(dst, dst_norm, 0, 255, NORM_MINMAX, CV_32FC1, Mat());
+    cv::Mat dst_norm, dst_norm_scaled;
+    normalize(dst, dst_norm, 0, 255, NORM_MINMAX, CV_32FC1, cv::Mat());
     convertScaleAbs(dst_norm, dst_norm_scaled);
 
     for (int i=0; i<dst_norm.rows; i++) {
