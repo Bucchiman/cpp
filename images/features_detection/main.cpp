@@ -3,7 +3,7 @@
  * Author:       8ucchiman
  * CreatedDate:  2023-04-26 16:29:31
  * LastModified: 2023-03-28 10:34:14 +0900
- * Reference:    8ucchiman.jp
+ * Reference:    https://github.com/oreillymedia/Learning-OpenCV-3_examples.git
  * Description:  ---
  */
 
@@ -57,7 +57,7 @@ using cv::xfeatures2d::FREAK;
 const double kDistanceCoef = 4.0;
 const int kMaxMatchingSize = 50;
 
-inline void detect_and_compute(string type, Mat& img, vector<KeyPoint>& kpts, Mat& desc) {
+inline void detect_and_compute(string type, cv::Mat& img, vector<cv::KeyPoint>& kpts, cv::Mat& desc) {
     if (type.find("fast") == 0) {
         type = type.substr(4);
         Ptr<FastFeatureDetector> detector = FastFeatureDetector::create(10, true);
@@ -185,24 +185,24 @@ int main(int argc, char** argv) {
     string img_file1(argv[3]);
     string img_file2(argv[4]);
 
-    Mat img1 = cv::imread(img_file1, cv::IMREAD_COLOR);
-    Mat img2 = cv::imread(img_file2, cv::IMREAD_COLOR);
+    cv::Mat img1 = cv::imread(img_file1, cv::IMREAD_COLOR);
+    cv::Mat img2 = cv::imread(img_file2, cv::IMREAD_COLOR);
 
     if (img1.channels() != 1) {
-        cvtColor(img1, img1, cv::COLOR_RGB2GRAY);
+        cv::cvtColor(img1, img1, cv::COLOR_RGB2GRAY);
     }
 
     if (img2.channels() != 1) {
-        cvtColor(img2, img2, cv::COLOR_RGB2GRAY);
+        cv::cvtColor(img2, img2, cv::COLOR_RGB2GRAY);
     }
 
-    vector<KeyPoint> kpts1;
-    vector<KeyPoint> kpts2;
+    vector<cv::KeyPoint> kpts1;
+    vector<cv::KeyPoint> kpts2;
 
-    Mat desc1;
-    Mat desc2;
+    cv::Mat desc1;
+    cv::Mat desc2;
 
-    vector<DMatch> matches;
+    vector<cv::DMatch> matches;
 
     detect_and_compute(desc_type, img1, kpts1, desc1);
     detect_and_compute(desc_type, img2, kpts2, desc2);
