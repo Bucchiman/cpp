@@ -46,6 +46,19 @@ $ S_{p\rightarrow x} = b     I_p+t < I_{p\rightarrow x}$
 7. ID3を使って各
 
 
+5. 画素の状態に応じて特徴ベクトルpを3つの部分集合
+
+
+# BLOB
+# SURF
+# SIFT
+# ORB
+# BRISK
+# KAZE
+# AKAZE
+# FREAK
+# DAISY
+# BRIEF
 
 # DoG画像
 `特徴点とその領域の大きさを表すスケールを検出`

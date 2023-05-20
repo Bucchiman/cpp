@@ -31,6 +31,13 @@ x=[0, 1], c...定数, g...γ特性
 画像の拡大時に最近傍にある画素をそのまま使う方法。
 
 
+# harris corner detector
+# lukas kanade
+# sift
+# mean shift
+# surf
+# fast
+# orb
 
 
 # 判別分析法
