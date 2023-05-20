@@ -1,16 +1,15 @@
 /*
  * FileName:     main
- * Author: 8ucchiman
+ * Author:       8ucchiman
  * CreatedDate:  2023-03-27 18:33:06 +0900
  * LastModified: 2023-03-27 19:38:40 +0900
- * Reference: https://docs.opencv.org/3.4/d4/d7d/tutorial_harris_detector.html
+ * Reference:    https://docs.opencv.org/3.4/d4/d7d/tutorial_harris_detector.html
  */
 
 #include <iostream>
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
 using namespace cv;
-using namespace std;
 
 cv::Mat src, src_gray;
 int thresh = 200;
@@ -24,13 +23,13 @@ void cornerHarris_demo(int, void*);
 
 int main(int argc, char** argv){
     CommandLineParser parser(argc, argv, "{@input | building.jpg | input image}");
-    src = imread(samples::findFile(parser.get<String>("@input")));
+    src = cv::imread(samples::findFile(parser.get<String>("@input")));
     if (src.empty()) {
-        cout << "Could not open or find the image!\n" << endl;
-        cout << "Usage: " << argv[0] << "<Input image>" << endl;
+        std::cout << "Could not open or find the image!\n" << std::endl;
+        std::cout << "Usage: " << argv[0] << "<Input image>" << std::endl;
         return -1;
     }
-    cvtColor(src, src_gray, COLOR_BGR2GRAY);
+    cv::cvtColor(src, src_gray, COLOR_BGR2GRAY);
     namedWindow(source_window);
     createTrackbar("Threshold: ", source_window, &thresh, max_thresh, cornerHarris_demo);
     imshow(source_window, src);

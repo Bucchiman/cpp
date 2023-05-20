@@ -41,3 +41,16 @@ $ S_{p\rightarrow x} = s     I_p+t < I_{p\rightarrow x}$
 
 
 5. 画素の状態に応じて特徴ベクトルpを3つの部分集合
+
+
+# BLOB
+# SURF
+# SIFT
+# ORB
+# BRISK
+# KAZE
+# AKAZE
+# FREAK
+# DAISY
+# BRIEF
+
