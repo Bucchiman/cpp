@@ -1,1 +1,1 @@
-/home/bucchiman/source/glad/src/glad.c
+/home/yk.iwabuchi/source/glad/src/glad.c
