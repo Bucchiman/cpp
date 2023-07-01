@@ -18,6 +18,7 @@ tmp/
 *.nsys-rep
 .DS_Store
 a.out
+main
 *.o
 *.a
 build/
