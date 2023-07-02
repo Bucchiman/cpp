@@ -11,10 +11,14 @@
 .PHONY: clean
 
 main: main.o
-	g++ -Wall -Weffc++ -o main main.o -lglut -lGLU -lGL
+	#g++ -Wall -Weffc++ -o main main.o -lglut -lGLU -lGL
+	cc -Wall -Weffc++ -o main main.o -lglut -lGLU -lGL
 
-main.o: main.cpp
-	g++ -c main.cpp
+#main.o: main.cpp
+#	g++ -c main.cpp
+
+main.o: main.c
+	cc -c main.cpp
 
 clean:
 	rm main.o main
