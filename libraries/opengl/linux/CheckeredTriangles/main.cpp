@@ -2,7 +2,7 @@
  * FileName:     main
  * Author:       8ucchiman
  * CreatedDate:  2023-07-01 23:37:16
- * LastModified: 2023-12-06 16:25:49
+ * LastModified: 2023-12-07 17:10:02
  * Reference:    8ucchiman.jp
  * Description:  ---
  */
@@ -33,13 +33,14 @@ GLubyte texture[][3] = {
 
 // Fixes up camera and remaps texture when window reshaped.
 void reshape(int width, int height) {
+    // printf("width: %d\theight: %d\n", width, height);
     glViewport(0, 0, width, height);
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
+    glMatrixMode(GL_PROJECTION);                    // projection transformation
+    glLoadIdentity();                               // initialize 
     gluPerspective(80, GLfloat(width)/height, 1, 40);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(2, -1, 5, 0, 0, 0, 0, 1, 0);
+    gluLookAt(2, -1, 5, 0, 0, 0, 0, 1, 0);          // lookat
     glEnable(GL_TEXTURE_2D);
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
     glTexImage2D(GL_TEXTURE_2D,
@@ -80,9 +81,9 @@ void display() {
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DEPTH | GLUT_SINGLE | GLUT_RGB);
-    glutInitWindowSize(520, 390);
+    glutInitWindowSize(520, 390);               // glutReshapeFunc width height
     glutCreateWindow("Textured Triangles");
     glutDisplayFunc(display);
-    //glutReshapeFunc(reshape);
+    glutReshapeFunc(reshape);
     glutMainLoop();
 }
