@@ -1,0 +1,16 @@
+ERR 2023-12-09T10:20:54.788 ?.517      vim_mktempdir:3316: tempdir root not owned by current user (bucchiman): /tmp/nvim.bucchiman
+ERR 2023-12-09T10:20:54.791 ?.517      vim_mktempdir:3322: tempdir root has invalid permissions (37777777776): /tmp/nvim.bucchiman
+WRN 2023-12-09T10:20:54.793 ?.517      vim_mktempdir:3334: tempdir create failed: no space left on device: /tmp/nvim.XXXXXX
+WRN 2023-12-09T10:20:54.802 ?.517      server_start:164: Failed to start server: invalid argument: /home/bucchiman/mnt/.config/lib/codes/c++/images/basics/show_pics/nvim.bucchiman/CQQprq/nvim.517.0
+ERR 2023-12-09T10:21:50.160 ?.557      vim_mktempdir:3316: tempdir root not owned by current user (bucchiman): /tmp/nvim.bucchiman
+ERR 2023-12-09T10:21:50.162 ?.557      vim_mktempdir:3322: tempdir root has invalid permissions (37777777776): /tmp/nvim.bucchiman
+WRN 2023-12-09T10:21:50.164 ?.557      vim_mktempdir:3334: tempdir create failed: no space left on device: /tmp/nvim.XXXXXX
+WRN 2023-12-09T10:21:50.172 ?.557      server_start:164: Failed to start server: invalid argument: /home/bucchiman/mnt/.config/lib/codes/c++/images/basics/show_pics/nvim.bucchiman/FbcXBb/nvim.557.0
+ERR 2023-12-09T10:29:51.895 ?.747      vim_mktempdir:3316: tempdir root not owned by current user (bucchiman): /tmp/nvim.bucchiman
+ERR 2023-12-09T10:29:51.897 ?.747      vim_mktempdir:3322: tempdir root has invalid permissions (37777777776): /tmp/nvim.bucchiman
+WRN 2023-12-09T10:29:51.899 ?.747      vim_mktempdir:3334: tempdir create failed: no space left on device: /tmp/nvim.XXXXXX
+WRN 2023-12-09T10:29:51.904 ?.747      server_start:164: Failed to start server: invalid argument: /home/bucchiman/mnt/.config/lib/codes/c++/images/basics/show_pics/nvim.bucchiman/FLrGHs/nvim.747.0
+ERR 2023-12-09T10:30:51.109 ?.761      vim_mktempdir:3316: tempdir root not owned by current user (bucchiman): /tmp/nvim.bucchiman
+ERR 2023-12-09T10:30:51.111 ?.761      vim_mktempdir:3322: tempdir root has invalid permissions (37777777776): /tmp/nvim.bucchiman
+WRN 2023-12-09T10:30:51.114 ?.761      vim_mktempdir:3334: tempdir create failed: no space left on device: /tmp/nvim.XXXXXX
+WRN 2023-12-09T10:30:51.120 ?.761      server_start:164: Failed to start server: invalid argument: /home/bucchiman/mnt/.config/lib/codes/c++/images/basics/show_pics/nvim.bucchiman/6T6UqA/nvim.761.0

@@ -29,14 +29,14 @@ int main(int argc, char* argv[]) {
   //resize down
   resize(image, resized_down, Size(down_width, down_height), INTER_LINEAR);
   // let's upscale the image using new  width and height
-  //int up_width = 600;
-  //int up_height = 400;
-  //Mat resized_up;
-  //resize up
-  //resize(image, resized_up, Size(up_width, up_height), INTER_LINEAR);
+  int up_width = 600;
+  int up_height = 400;
+  Mat resized_up;
+  //resize up;
+  resize(image, resized_up, Size(up_width, up_height), INTER_LINEAR);
   // Display Images and press any key to continue
-  //imshow("Resized Down by defining height and width", resized_down);
-  //waitKey();
+  imshow("Resized Down by defining height and width", resized_down);
+  waitKey();
   if(resized_down.empty())
   {
     std::cerr << "Something is wrong with the webcam, could not get frame." << std::endl;

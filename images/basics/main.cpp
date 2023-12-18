@@ -46,5 +46,6 @@ int main(void) {
 	    writer << image;  // 画像 image を動画ファイルへ書き出す
 	    if (cv::waitKey(1) == 'q') break; //qを押すと終了
 	}
+    printf("hello\n");
     return 0;
 }
