@@ -1,0 +1,1 @@
+g++ -o main main.cpp -lglfw -framework Cocoa -framework OpenGL -framework IOKit -framework CoreVideo
