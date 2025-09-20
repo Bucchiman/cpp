@@ -9,7 +9,7 @@
 
 
 
-CXXFLAGS = -g –Wall -std=c++11
+CXXFLAGS = -g -Wall -std=c++11
 LDLIBS = -L/opt/local/lib -lglfw3 -lGLEW -framework OpenGL \
 		 -framework CoreVideo -framework IOKit -framework Cocoa
 OBJECTS = $(patsubst %.cpp,%.o,$(wildcard *.cpp))

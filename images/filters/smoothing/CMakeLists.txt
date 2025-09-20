@@ -17,5 +17,4 @@ add_executable(main
 
 # リンクするライブラリを読み込む
 target_link_libraries(main
-    ${OpenCV_LIBRARIES}
-)
+    ${OpenCV_LIBRARIES})

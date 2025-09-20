@@ -1,13 +1,23 @@
-#
-# FileName:     CMakeLists
-# Author:       8ucchiman
-# CreatedDate:  2023-12-17 14:31:02
-# LastModified: 2023-12-17 14:31:39
-# Reference:    https://qiita.com/shohirose/items/45fb49c6b429e8b204ac
-#               https://cmake.org/cmake/help/git-master/prop_gbl/CMAKE_CXX_KNOWN_FEATURES.html#prop_gbl:CMAKE_CXX_KNOWN_FEATURES
-# Description:  ---
-#
+cmake_minimum_required(VERSION 2.8.3)
+project(Bmods CXX)
+set(SOURCE_FILE Bmods.cpp)
 
+# OpenCVのビルド環境の設定ファイルを読み込む
+find_package(OpenCV REQUIRED)
 
-project(tips)
-add_executable(tips tips.cpp)
+# OpenCV関係のインクルードディレクトリのパスを設定
+include_directories(
+    ${OpenCV_INCLUDE_DIRS}
+)
+
+add_library(Bmods SHARED Bmods.cpp)
+
+# 実行ファイル名を設定
+# add_executable(Bmods
+#     ${SOURCE_FILE}
+# )
+# 
+# # リンクするライブラリを読み込む
+# target_link_libraries(Bmods
+#     ${OpenCV_LIBRARIES} Bdev
+# )
