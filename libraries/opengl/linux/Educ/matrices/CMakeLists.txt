@@ -15,7 +15,7 @@ project(8ucchiman_project CXX)   # 8ucchiman_projectをc++で作成
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-set(SRCS main.cpp)
+set(SRCS main.cpp shader.cpp)
 
 add_executable(main
     ${SRCS})
